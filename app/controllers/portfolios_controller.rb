@@ -6,7 +6,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
@@ -35,6 +35,13 @@ class PortfoliosController < ApplicationController
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio was removed.' }
     end
   end
 
