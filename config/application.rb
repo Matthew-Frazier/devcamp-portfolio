@@ -19,7 +19,9 @@ Bundler.require(*Rails.groups)
 
 module DevcampPortfolio
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    # # This is if you want to allow all parameters to be accepted in all controllers
+    # config.action_controller_permit_all_parameters = true
+
     config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.
